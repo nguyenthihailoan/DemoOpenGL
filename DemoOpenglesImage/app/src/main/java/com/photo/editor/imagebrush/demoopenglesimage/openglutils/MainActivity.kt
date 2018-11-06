@@ -1,17 +1,12 @@
-package com.photo.editor.imagebrush.demoopenglesimage
+package com.photo.editor.imagebrush.demoopenglesimage.openglutils
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.app.ActivityManager
-import android.content.Context
 import android.opengl.GLSurfaceView
-import android.os.Build
 import android.view.Menu
-import android.view.View
-import android.view.MenuInflater
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
-import android.graphics.BitmapFactory
+import com.photo.editor.imagebrush.demoopenglesimage.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,14 +14,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        renderer = TextureRenderer()
-//        renderer?.setImageBitmap(BitmapFactory.decodeResource(resources, R.drawable.gliter1))
-//        renderer?.setCurrentEffect(R.id.none)
-        glsuface.setEGLContextClientVersion(2)
-        glsuface.setRenderer(GlRenderer(baseContext))
-        glsuface.renderMode = GLSurfaceView.RENDERMODE_WHEN_DIRTY
-
+//        setContentView(R.layout.activity_main)
+        var glview = GLView(this)
+        setContentView(glview)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

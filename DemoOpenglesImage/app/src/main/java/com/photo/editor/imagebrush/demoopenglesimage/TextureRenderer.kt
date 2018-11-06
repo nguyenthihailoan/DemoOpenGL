@@ -8,10 +8,10 @@ import android.media.effect.EffectContext
 import android.opengl.GLUtils
 import android.graphics.Bitmap
 import android.media.effect.EffectFactory
-import android.content.Context
 import android.graphics.Color
 import android.media.effect.Effect
 import android.util.Log
+import com.photo.editor.imagebrush.demoopenglesimage.openglutils.GLToolbox
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.FloatBuffer
